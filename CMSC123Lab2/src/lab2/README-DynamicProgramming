@@ -8,3 +8,6 @@ Ratings:
 3. Suitability for generating an answer = highly suitable
 4. Concept comprehension = easy when you're trying to implement it for cases like the Fibonacci Sequence but not for TSP problems
 
+Notes: 
+> DynamicProgramming.java => has multiple paths being outputted
+> DynamicProgrammingSinglePath => has one single path being outputted
