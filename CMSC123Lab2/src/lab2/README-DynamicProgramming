@@ -1,0 +1,10 @@
+Notes and Observations taken from using Dynamic Programming:
+> DP is more suitable for getting a single, optimal answer rather than getting multiple paths (such as brute force)
+> DP is very efficient when it looks for a single optimal path, but requires more space and becomes less efficient when searching for all possible minimal paths
+
+Ratings:
+1. Suitability for TSP (One Path) = highly suitable
+2. Suitability for TSP (multiple paths) = uses lots of space and is hard to implement; unsuitable
+3. Suitability for generating an answer = highly suitable
+4. Concept comprehension = easy when you're trying to implement it for cases like the Fibonacci Sequence but not for TSP problems
+
