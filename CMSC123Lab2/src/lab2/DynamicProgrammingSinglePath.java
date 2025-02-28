@@ -1,10 +1,10 @@
-package lab2;
+package lab2_1;
 
 import java.util.ArrayList;
 
 // TBA: path route, use ArrayList<Integer>
 public class DynamicProgrammingSinglePath {
-	private static final int N = 6;
+	private static int N;
 	private static ArrayList<Integer>[][] storedPath;
 	private static ArrayList<Integer> currentPath;
 	private static int completeVisited, startNode;
@@ -56,22 +56,23 @@ public class DynamicProgrammingSinglePath {
 	// set matrix 
 	private static int[][] setMatrix() {
 		int[][] matrix = { 
-				{0, 9, 7, 3, 12, 11}, 
-				{9, 0, 8, 5, 14, 13},
-				{7, 8, 0, 6, 10, 15},
-				{3, 5, 6, 0, 9,  7},
-				{12, 14, 10, 9, 0,  4},
-				{11, 13, 15, 7, 4,  0},
+			    {0, 5, 12, 8, 16, 9},
+			    {5, 0, 7, 10, 14, 3},
+			    {12, 7, 0, 6, 9, 11},
+			    {8, 10, 6, 0, 13, 4},
+			    {16, 14, 9, 13, 0, 17},
+			    {9, 3, 11, 4, 17, 0}
 		}; 
 		return matrix;
 	}
 	
 	// main function
 	public static void main(String[] args) {
+		adjacencyMatrix = setMatrix(); // set adjacencyMatrix
+		N = adjacencyMatrix.length;
 		storedPath = new ArrayList[1 << N][N];
 		currentPath = new ArrayList<Integer>();
 		storedCost = new int[1 << N][N]; // set memoization
-		adjacencyMatrix = setMatrix(); // set adjacencyMatrix
 		
 		// fill all storedCost[][] with 0 (meaning no distance) and init storedPath
 		for(int i = 0; i < (1 << N); i++) { 
